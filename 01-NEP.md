@@ -788,37 +788,45 @@ agreement unlocks settlement; dispute holds funds without reversal.
 
 ## 19. The submission attachments
 
-The complete attachment package accompanies this NEP, published in a
-dedicated repository (no folders or archives needed — link it directly):
+### 19.1 What is attached to this NEP (Markdown, 6 files)
+
+The NEP platform accepts **Markdown attachments only**. The following
+files accompany this proposal:
+
+| # | Attached file | What it is |
+|---|---|---|
+| 1 | `01-NEP-Document.md` | this document (submit as `neps/nep-0000-panic-free-resolution.md`) |
+| 2 | `02-Verification-Guide.md` | reproduce every claim (on-chain curl + local tests) |
+| 3 | `03-Ecosystem-Solutions.md` | the constructive architecture map (the 5 NEAR friction points) |
+| 4 | `04-Submission-Index.md` | what is attached vs. what is in the repository |
+| 5 | `06-Address-Ledger.md` | every contract address + role |
+| 6 | `07-Tutorial.md` | how to use the whole system |
+
+### 19.2 What is in the repository (link only, not attached)
+
+Everything else — the Rust crate, the kernel source, the deployed wasm
+artifacts, the SDK, the examples, the deployable closure — is in the
+dedicated submission repository (no folders or archives; link it
+directly):
 
 **https://github.com/sykomiked/zxv-nep-submission**
 
-The manifest (`INDEX.md` in the repository) serializes every file with
-a concise use instruction; the package is self-contained and
-verifiable.
+| Repository path | What it is |
+|---|---|
+| `workspace/crates/near-panic-free/` | the core `#![no_std]` crate (`cargo add near-panic-free`) |
+| `workspace/crates/near-panic-free-sdk/` | the NEP-297 event helpers |
+| `workspace/examples/` | the 4 example contracts (multi-oracle escrow, agent intent solver, inline, cross-contract) |
+| `workspace/kernel/` | the canonical reference + the actual deployed wasm artifacts + SHA-256 checksums |
+| `workspace/tools/` | `verify.sh`, `verify_mainnet_gate.sh`, `build_reproducible.sh` |
+| `reference-implementation/nep_gate.rs` | the minimal Rust reference |
+| `deploy-repo/` | the complete deployable kernel closure + the exact build script + `DEPLOYMENT.md` |
+| `contracts/` | the deployed contract sources (the provenance) |
+| `sdk/` | the SDK + CLI |
 
-| Attachment | What it is | How to use it |
-|---|---|---|
-| `01-NEP.md` | this document | submit as `neps/nep-0000-panic-free-resolution.md` |
-| `02-VERIFICATION-GUIDE.md` | reproduce every claim | run the curl commands + the tests |
-| `03-ECOSYSTEM_SOLUTIONS.md` | the architecture map | the 5 friction points + case studies |
-| `INDEX.md` | the manifest | the map to everything |
-| `reference-implementation/nep_gate.rs` | the minimal reference | `cargo test` it |
-| `workspace/` | the cargo workspace | `bash tools/verify.sh` |
-| `workspace/crates/near-panic-free/` | the core crate | `cargo add near-panic-free` |
-| `workspace/crates/near-panic-free-sdk/` | the NEP-297 helpers | import for the event schema |
-| `workspace/examples/` | the 4 example contracts | read for the integration patterns |
-| `workspace/kernel/artifacts/` | the actual deployed wasm | compare the SHA-256 to the on-chain code |
-| `workspace/tools/` | verify + build + live-test | run them |
-| `deploy-repo/` | the complete deployable kernel | `sh build_system/build_near_contract.sh` |
-| `contracts/` | the deployed sources | the provenance |
-| `ledger/` | the address ledger + tutorial | the map + the manual |
-| `sdk/` | the SDK + CLI | the developer toolkit |
-
-**The one-line summary for reviewers:** the NEP is the interface; the
-workspace is the importable implementation; the deploy-repo is the
-exact deployment; the artifacts are the ground truth; the index is the
-map. Everything verifies, everything is open.
+**The one-line summary for reviewers:** the six attached Markdown files
+are the proposal and its guides; the repository holds the importable
+implementation, the exact deployment, and the ground-truth artifacts —
+everything verifies, everything is open.
 
 ## 20. Copyright
 
