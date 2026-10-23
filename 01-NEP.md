@@ -788,9 +788,14 @@ agreement unlocks settlement; dispute holds funds without reversal.
 
 ## 19. The submission attachments
 
-The complete attachment package accompanies this NEP. The manifest
-(`neps/submission-package/INDEX.md`) serializes every file with a
-concise use instruction; the package is self-contained and verifiable.
+The complete attachment package accompanies this NEP, published in a
+dedicated repository (no folders or archives needed — link it directly):
+
+**https://github.com/sykomiked/zxv-nep-submission**
+
+The manifest (`INDEX.md` in the repository) serializes every file with
+a concise use instruction; the package is self-contained and
+verifiable.
 
 | Attachment | What it is | How to use it |
 |---|---|---|

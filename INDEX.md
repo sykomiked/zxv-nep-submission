@@ -7,6 +7,10 @@ Every file in this package, what it is, and exactly how to use it.
 Each filename is unique. The package is self-contained: verify
 everything, build everything, deploy everything.
 
+**The package is published in its own repository (link this in the
+NEP submission — no folders or zips needed):**
+**https://github.com/sykomiked/zxv-nep-submission**
+
 ---
 
 ## The package at a glance
