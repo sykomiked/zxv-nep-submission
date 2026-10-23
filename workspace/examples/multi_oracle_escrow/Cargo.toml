@@ -1,0 +1,14 @@
+[package]
+name = "multi-oracle-escrow"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "The reference near-sdk contract: a multi-oracle dispute escrow using near-panic-free (Path A: inline library)."
+publish = false
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-panic-free-sdk = { workspace = true }
+near-sdk = { workspace = true }

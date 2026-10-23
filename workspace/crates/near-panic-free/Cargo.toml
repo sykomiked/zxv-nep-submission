@@ -1,0 +1,17 @@
+[package]
+name = "near-panic-free"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Deterministic panic-free state resolution via chain-meet logic for NEAR. The reference implementation of NEP: Standard Interface for Deterministic Panic-Free State Resolution (Chain-Meet)."
+keywords = ["near", "state-machine", "paraconsistent", "no-std", "formal-verification"]
+categories = ["no-std", "wasm", "data-structures"]
+readme = "README.md"
+
+[dependencies]
+# Zero dependencies. No near-sdk required for the core mathematical crate.
+
+[dev-dependencies]
+# Required only for property tests and fuzzing.

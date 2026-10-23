@@ -1,0 +1,28 @@
+{
+  "name": "zxv-nep-gate",
+  "version": "1.0.0",
+  "description": "The TypeScript SDK for the NEAR NEP: Standard Interface for Deterministic Panic-Free State Resolution (Chain-Meet). Zero-dependency, gas-free view calls.",
+  "main": "zxv-nep-gate.js",
+  "types": "zxv-nep-gate.d.ts",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "near",
+    "nep",
+    "paraconsistent",
+    "four-valued",
+    "state-machine",
+    "settlement",
+    "no-dependencies"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sykomiked/ZXV-NEP-paraconsistent"
+  },
+  "files": [
+    "zxv-nep-gate.js",
+    "zxv-nep-gate.ts"
+  ]
+}

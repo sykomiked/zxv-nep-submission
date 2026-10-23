@@ -1,0 +1,17 @@
+[package]
+name = "zxv-core-kernel"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "The canonical reference implementation of the near-panic-free standard — the deployed zxv-core kernel (the living testbed on NEAR mainnet)."
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-panic-free-sdk = { workspace = true }
+near-sdk = { workspace = true }

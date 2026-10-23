@@ -1,0 +1,13 @@
+[package]
+name = "cross-contract-resolver"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Path B integration: the contract routes contentious inputs to the shared public kernel (zedec.near / zxv-core) as a dispute utility."
+publish = false
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-sdk = { workspace = true }

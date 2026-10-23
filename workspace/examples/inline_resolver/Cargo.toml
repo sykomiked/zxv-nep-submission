@@ -1,0 +1,13 @@
+[package]
+name = "inline-resolver"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Path A integration: resolution compiled directly into the contract (zero cross-contract overhead)."
+publish = false
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-sdk = { workspace = true }

@@ -1,0 +1,19 @@
+[package]
+name = "near-panic-free-sdk"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "near-sdk macro bindings and NEP-297 event helpers for the near-panic-free standard (deterministic panic-free state resolution)."
+keywords = ["near", "near-sdk", "nep-297", "state-machine", "paraconsistent"]
+categories = ["no-std", "wasm"]
+readme = "README.md"
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-sdk = { workspace = true, optional = true }
+
+[features]
+default = []
+near-sdk = ["dep:near-sdk"]

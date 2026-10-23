@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/near-panic-free",
+    "crates/near-panic-free-sdk",
+    "examples/multi_oracle_escrow",
+    "examples/agent_intent_solver",
+    "examples/inline_resolver",
+    "examples/cross_contract_resolver",
+    "kernel",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Michael Laurence Curzi <deal@zedec.ai>"]
+license = "Apache-2.0"
+repository = "https://github.com/sykomiked/ZXV-NEP-paraconsistent"
+
+[workspace.dependencies]
+near-panic-free = { path = "crates/near-panic-free", version = "0.1.0", default-features = false }
+near-panic-free-sdk = { path = "crates/near-panic-free-sdk", version = "0.1.0" }
+near-sdk = { version = "5", features = ["legacy"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

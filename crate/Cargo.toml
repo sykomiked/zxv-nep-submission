@@ -1,0 +1,21 @@
+[package]
+name = "zxv-nep-gate"
+version = "1.0.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/sykomiked/ZXV-NEP-paraconsistent"
+description = "The reference implementation of the NEAR NEP: Standard Interface for Deterministic Panic-Free State Resolution (Chain-Meet). A #![no_std], zero-allocation four-valued logic gate — only TRUE settles."
+keywords = ["near", "nep", "paraconsistent", "four-valued", "state-machine", "settlement", "no_std"]
+categories = ["cryptography", "no-std", "wasm"]
+readme = "README.md"
+
+[dependencies]
+serde = { version = "1", features = ["derive"], optional = true }
+
+[features]
+default = ["std"]
+std = ["serde"]
+no_std = []
+
+[lib]
+crate-type = ["cdylib", "rlib"]

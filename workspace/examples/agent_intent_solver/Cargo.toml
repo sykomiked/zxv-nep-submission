@@ -1,0 +1,13 @@
+[package]
+name = "agent-intent-solver"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "The NEAR 2026 example: an autonomous intent solver that holds a dispute without reverting (Path A: inline library)."
+publish = false
+
+[dependencies]
+near-panic-free = { workspace = true }
+near-sdk = { workspace = true }
